@@ -18,16 +18,7 @@
     <div class="navbar-inner">
         <div class="container">
             <ul class="nav">  
-                @if(!Auth::check())
-            <nav class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class="container">
-    
-
-                    {{ HTML::link('users/register', 'Register') }}
-                    {{ HTML::link('users/login', 'Login') }} 
-                      </div>
-</nav>  
-                @else
+                @if(Auth::check())
              <nav class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
                     {{ HTML::link('users/logout', 'logout') }}
